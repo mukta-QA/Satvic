@@ -6,9 +6,9 @@ import org.openqa.selenium.support.FindBy;
 
 public class DetoxUrlPage {
     @FindBy(id = "register_now_btn")
-    private WebElement registorNow;
+    private WebElement registerNow;
     @FindBy(id = "register_right_button")
-    private WebElement registorRightbutton;
+    private WebElement registerRightbutton;
     @FindBy(xpath = "*//a[text()='Workshop Login']")
     private WebElement workshopLogin;
 
