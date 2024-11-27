@@ -67,7 +67,11 @@ public class RegistorNowTest extends BaseClass {
 
     @Test(priority = 3)
     public void VerifyFormisSubmittedwithValidData(){
-
+    boolean formisvisible=detoxUrlPage.registerNowformIsDisplayed();
+    if (formisvisible)
+    {
+        detoxUrlPage.enterName();
+    }
     }
 
     @AfterClass
