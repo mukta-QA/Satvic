@@ -70,7 +70,13 @@ public class RegistorNowTest extends BaseClass {
     boolean formisvisible=detoxUrlPage.registerNowformIsDisplayed();
     if (formisvisible)
     {
-        detoxUrlPage.enterName();
+        detoxUrlPage.enterName(properties.getProperty("name"));
+        detoxUrlPage.enterEmail(properties.getProperty("email"));
+        detoxUrlPage.enterphone(properties.getProperty("phone"));
+        detoxUrlPage.enterCity(properties.getProperty("city"));
+        detoxUrlPage.clickTermsCheckbux();
+        detoxUrlPage.clickOnTimeSlotDropdown();
+        detoxUrlPage.clickRegisterNowtopay();
     }
     }
 

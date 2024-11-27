@@ -2,6 +2,7 @@ package pomPackage;
 
 import basePackage.BaseClass;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -86,12 +87,19 @@ public class DetoxUrlPage extends BaseClass {
     public void enterEmail(String emailAddress){
         email.sendKeys(emailAddress);
     }
+
+    public void enterphone(String phoneNumber){
+        email.sendKeys(phoneNumber);
+    }
     public void enterCity(String place){
         city.sendKeys(place);
     }
 
     public void clickOnTimeSlotDropdown(){
         timeslot.click();
+        actions = new Actions(driver);
+        actions.sendKeys(Keys.ARROW_DOWN).perform();
+        Thread.sleep(7000);
     }
 
     public void clickTermsCheckbux(){
