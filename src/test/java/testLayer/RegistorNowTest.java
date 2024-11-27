@@ -66,7 +66,7 @@ public class RegistorNowTest extends BaseClass {
     }*/
 
     @Test(priority = 3)
-    public void VerifyFormisSubmittedwithValidData(){
+    public void VerifyFormisSubmittedwithValidData() throws InterruptedException {
     boolean formisvisible=detoxUrlPage.registerNowformIsDisplayed();
     if (formisvisible)
     {

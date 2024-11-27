@@ -95,7 +95,7 @@ public class DetoxUrlPage extends BaseClass {
         city.sendKeys(place);
     }
 
-    public void clickOnTimeSlotDropdown(){
+    public void clickOnTimeSlotDropdown() throws InterruptedException {
         timeslot.click();
         actions = new Actions(driver);
         actions.sendKeys(Keys.ARROW_DOWN).perform();
