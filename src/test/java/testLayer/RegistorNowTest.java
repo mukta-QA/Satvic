@@ -77,7 +77,13 @@ public class RegistorNowTest extends BaseClass {
         detoxUrlPage.clickTermsCheckbux();
         detoxUrlPage.clickOnTimeSlotDropdown();
         detoxUrlPage.clickRegisterNowtopay();
+        assertS.
     }
+    else
+    {
+        assertS.fail("Form not visible properly");
+    }
+    assertS.assertAll();
     }
 
     @AfterClass
