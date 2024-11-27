@@ -77,7 +77,7 @@ public class RegistorNowTest extends BaseClass {
         detoxUrlPage.clickTermsCheckbux();
         detoxUrlPage.clickOnTimeSlotDropdown();
         detoxUrlPage.clickRegisterNowtopay();
-        assertS.
+
     }
     else
     {
