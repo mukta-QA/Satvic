@@ -66,7 +66,9 @@ public class RegistorNowTest extends BaseClass {
     }*/
 
     @Test(priority = 3)
-    public v
+    public void VerifyFormisSubmittedwithValidData(){
+
+    }
 
     @AfterClass
     public void objectClear() {
