@@ -3,6 +3,7 @@ package basePackage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import utility.TimeUtils;
 
@@ -51,6 +52,7 @@ public static void initiate() {
     {
         //System.setProperty("webdriver.edge.driver","edgedriver.exe");
         WebDriverManager.edgedriver().setup();
+        driver=new EdgeDriver();
     }
      driver.manage().window().maximize();
      driver.manage().timeouts().pageLoadTimeout(TimeUtils.timepage, TimeUnit.SECONDS);
