@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class RegistorNowTest extends BaseClass {
+    WebDriver driver;
     WebDriverWait driverWait;
     DetoxUrlPage detoxUrlPage;
     SoftAssert assertS;
@@ -26,7 +27,7 @@ public class RegistorNowTest extends BaseClass {
     @BeforeTest
     public void initsetup() throws IOException {
         //initsetup();
-        initiate();
+        driver=initiate();
 
     }
     @BeforeClass
