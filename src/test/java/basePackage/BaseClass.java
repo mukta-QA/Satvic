@@ -31,7 +31,7 @@ public BaseClass() throws IOException {
 public static WebDriver initiate() {
 
 
-    String browsername=properties.getProperty("browsername");
+    String browsername=properties.getProperty("browser");
     //String browsername="Chrome";
     if (browsername.equals("FireFox"))
     {
@@ -42,8 +42,8 @@ public static WebDriver initiate() {
 
     else if (browsername.equals("Chrome"))
     {
-       // System.setProperty("webdriver.chrome.driver","src//test//resources//Driver//chromedriver.exe");
-        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver","src//test//resources//Driver//chromedriver.exe");
+       // WebDriverManager.chromedriver().setup();
         driver =new ChromeDriver();
 
         try {
