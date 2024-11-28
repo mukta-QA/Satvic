@@ -21,17 +21,15 @@ public static WebDriver driver;
 public BaseClass() throws IOException {
 
     FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\environmentVariables\\Config.properties");
+    System.out.println(file.toString());
    // FileInputStream file = new FileInputStream("C:\\Users\\MUKTA\\git\\SatvicMovement\\src\\test\\java\\environmentVariables\\Config.properties");
     //Content root path:src/test/java/environmentVariables/Config.properties
     //"C:\\Users\\MUKTA\\git\\SatvicMovement\\src\\test\\java\\environmentVariables\\Config.properties"
     properties.load(file);
 }
-//driver path
-    //maximize pageload,
+
 public static WebDriver initiate() {
-    //if browser = chrome then webdriver.chrome.driver;
-    // elseif(browser = firefox  then webdriver.gecko.driver;
-    //elseif(browser = edge then webdriver.edge.driver;
+
 
     String browsername=properties.getProperty("browsername");
     //String browsername="Chrome";

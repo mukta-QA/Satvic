@@ -56,7 +56,7 @@ public class DetoxUrlPage extends BaseClass {
     public DetoxUrlPage() throws IOException {
 
         PageFactory.initElements(driver,this);
-
+        this.driver=driver;
 
     }
     Actions actions;
