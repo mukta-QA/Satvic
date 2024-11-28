@@ -20,9 +20,9 @@ public static WebDriver driver;
 //Constructor of Base Class
 public BaseClass() throws IOException {
 
-    FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\environmentVariables\\Config.properties");
-    System.out.println(file.toString());
-   // FileInputStream file = new FileInputStream("C:\\Users\\MUKTA\\git\\SatvicMovement\\src\\test\\java\\environmentVariables\\Config.properties");
+  //  FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\environmentVariables\\Config.properties");
+   // System.out.println(file.toString());
+    FileInputStream file = new FileInputStream("C:\\Users\\MUKTA\\git\\SatvicMovement\\src\\test\\java\\environmentVariables\\Config.properties");
     //Content root path:src/test/java/environmentVariables/Config.properties
     //"C:\\Users\\MUKTA\\git\\SatvicMovement\\src\\test\\java\\environmentVariables\\Config.properties"
     properties.load(file);
