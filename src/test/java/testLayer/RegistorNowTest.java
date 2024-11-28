@@ -57,7 +57,7 @@ public class RegistorNowTest extends BaseClass {
    /* @Test(priority=3)
     public void VerifyLeftRegisterNowbuttonReachesRegisterNowForm() throws InterruptedException {
         detoxUrlPage.clickOnLeftRegisterNow();
-        Thread.sleep(7000);
+
         boolean actualResult=detoxUrlPage.registerNowformIsDisplayed();
 
         assertS=new SoftAssert();
@@ -67,23 +67,18 @@ public class RegistorNowTest extends BaseClass {
 
     @Test(priority = 3)
     public void VerifyFormisSubmittedwithValidData() throws InterruptedException {
-    boolean formisvisible=detoxUrlPage.registerNowformIsDisplayed();
-    if (formisvisible)
-    {
-        detoxUrlPage.enterName(properties.getProperty("name"));
-        detoxUrlPage.enterEmail(properties.getProperty("email"));
-        detoxUrlPage.enterphone(properties.getProperty("phone"));
-        detoxUrlPage.enterCity(properties.getProperty("city"));
-        detoxUrlPage.clickTermsCheckbux();
-        detoxUrlPage.clickOnTimeSlotDropdown();
-        detoxUrlPage.clickRegisterNowtopay();
+        // Check if the form is visible
+        boolean formisvisible = detoxUrlPage.registerNowformIsDisplayed();
 
-    }
-    else
-    {
-        assertS.fail("Form not visible properly");
-    }
-    assertS.assertAll();
+        // Add an assertion to ensure the form is displayed
+        Assert.assertTrue(formisvisible, "Form should be displayed but is not");
+
+        // Proceed with the test only if the assertion passes
+        detoxUrlPage.fillFormWithValidData();
+        detoxUrlPage.submitForm();
+
+        // Additional checks for successful submission
+        Assert.assertTrue(detoxUrlPage.isPaymentProgressdisplayed(), "Form submission failed!");
     }
 
     @AfterClass
