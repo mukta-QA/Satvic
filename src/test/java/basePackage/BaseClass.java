@@ -42,8 +42,8 @@ public static WebDriver initiate() {
 
     else if (browsername.equals("Chrome"))
     {
-        System.setProperty("webdriver.chrome.driver","src//test//resources//Driver//chromedriver.exe");
-       // WebDriverManager.chromedriver().setup();
+       // System.setProperty("webdriver.chrome.driver","src//test//resources//Driver//chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         driver =new ChromeDriver();
 
         try {
